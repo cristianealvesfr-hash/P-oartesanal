@@ -1,0 +1,206 @@
+:root {
+  /* Colors */
+  --color-primary: #5A3825; /* Marrom escuro */
+  --color-secondary: #FAEDCD; /* Bege claro / Creme */
+  --color-accent: #D4A373; /* Mostarda / Dourado escuro */
+  --color-background: #FDFBF7; /* Off-white quentinho */
+  --color-surface: #FFFFFF; /* Branco para cards */
+  --color-text-main: #332211; /* Marrom bem escuro para texto */
+  --color-text-muted: #7A5C4A; /* Marrom médio para descrição */
+  --color-danger: #D32F2F;
+  --color-success: #388E3C;
+
+  /* Typography */
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Poppins', serif; /* Usando Poppins que é sans, mas tem peso elegante. Se preferir serif, podemos usar Playfair. O usuário sugeriu Poppins ou cursiva/serif. */
+  
+  /* Shadows & Glassmorphism */
+  --shadow-sm: 0 2px 8px rgba(90, 56, 37, 0.08);
+  --shadow-md: 0 4px 16px rgba(90, 56, 37, 0.12);
+  --shadow-lg: 0 8px 24px rgba(90, 56, 37, 0.16);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: 1px solid rgba(250, 237, 205, 0.5);
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+  
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+/* Shop Layout (Desktop 2-columns) */
+.shop-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-main-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.shop-cart-col {
+  /* No display: none. Let Cart.jsx handle its own visibility via fixed positioning on mobile */
+}
+
+@media (min-width: 1024px) {
+  .shop-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: var(--space-xl);
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 var(--space-lg);
+    align-items: start; /* allow columns to have natural height */
+  }
+
+  .shop-cart-col {
+    display: block;
+    position: relative;
+  }
+}
+
+/* Glassmorphism helpers */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: var(--glass-border);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #4A2E1F;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover:not(:disabled) {
+  background-color: var(--color-secondary);
+}
+
+/* Base Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Bottom sheet behavior on mobile */
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background-color: var(--color-surface);
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  padding: var(--space-xl) var(--space-md);
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .modal-overlay {
+    align-items: center;
+  }
+  .modal-content {
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

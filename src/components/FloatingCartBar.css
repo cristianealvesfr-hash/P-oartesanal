@@ -1,0 +1,98 @@
+.floating-cart-bar-container {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+  padding: 0 16px;
+  pointer-events: none;
+}
+
+.floating-cart-bar {
+  pointer-events: auto;
+  width: 100%;
+  max-width: 440px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 8px 24px rgba(90, 56, 37, 0.35);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  animation: slideUpFloat 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.floating-cart-bar:active {
+  transform: scale(0.98);
+}
+
+.floating-cart-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.floating-cart-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: var(--color-danger);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 800;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-primary);
+}
+
+.floating-cart-label {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+}
+
+.floating-cart-right {
+  display: flex;
+  align-items: center;
+}
+
+.floating-cart-price {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--color-secondary);
+}
+
+@keyframes slideUpFloat {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Hide on desktop (where cart is sticky on the right column) */
+@media (min-width: 1024px) {
+  .floating-cart-bar-container {
+    display: none !important;
+  }
+}

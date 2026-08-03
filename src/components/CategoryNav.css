@@ -1,0 +1,107 @@
+.category-nav-container {
+  background-color: var(--color-surface);
+  padding: var(--space-md) 0;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 120px; /* Ajustado para ficar abaixo do novo header com busca */
+  z-index: 40;
+}
+
+.category-nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  position: relative;
+}
+
+.nav-arrow-category {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+  z-index: 10;
+}
+
+.nav-arrow-category:hover {
+  background-color: var(--color-secondary);
+}
+
+.category-list {
+  display: flex;
+  flex: 1;
+  gap: var(--space-lg);
+  overflow-x: auto;
+  padding: var(--space-sm) 16px; /* Adicionado padding horizontal para não comer a borda */
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  justify-content: center; /* Centraliza as categorias */
+}
+
+.category-list::-webkit-scrollbar {
+  display: none;
+}
+
+.category-circular-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  width: 90px;
+  min-width: 90px;
+  transition: transform 0.2s;
+}
+
+.category-circular-btn:hover {
+  transform: translateY(-2px);
+}
+
+.category-img-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  padding: 3px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.category-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+}
+
+.category-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.category-circular-btn.active .category-img-wrapper {
+  border-color: var(--color-primary);
+}
+
+.category-circular-btn.active .category-label {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .category-nav-container {
+    top: 130px;
+  }
+  .category-list {
+    justify-content: flex-start;
+  }
+}
