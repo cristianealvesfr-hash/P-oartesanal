@@ -52,7 +52,7 @@ export const products = [
     name: 'Kit 2 Pão Lembrança',
     description: '5 pães leves de 80G cada e com leite, ideal para lanches e lancheiras. 400G',
     price: 15.00,
-    image: '/assets/pão de casa png 10.png',
+    image: '/assets/kit_2_pao_lembranca.jpg',
     type: 'standard'
   },
 
