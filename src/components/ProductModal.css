@@ -242,9 +242,21 @@
   padding-bottom: 0;
 }
 
+.hybrid-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .hybrid-item-info strong {
   font-size: 0.95rem;
   color: var(--color-text-main);
+}
+
+.hybrid-item-flavor {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
 }
 
 .hybrid-controls {
