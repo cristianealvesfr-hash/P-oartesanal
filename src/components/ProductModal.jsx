@@ -130,7 +130,7 @@ export const ProductModal = ({ product, isOpen, onClose }) => {
                     <div key={item.id} className="hybrid-item">
                       <div className="hybrid-item-info">
                         <strong>{item.name}</strong>
-                        {item.flavor && <span className="hybrid-item-flavor">({item.flavor})</span>}
+                        <p className="hybrid-item-desc">{item.description}</p>
                       </div>
                       <div className="quantity-controls-large hybrid-controls">
                         <button onClick={() => handleDecrease(item.id)} className="qty-btn-large" disabled={qty === 0}>-</button>
