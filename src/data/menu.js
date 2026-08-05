@@ -91,7 +91,7 @@ export const products = [
     name: 'Casal Perfeito',
     description: 'Queijo e goiabada na proporção perfeita! Valor por Unidade (50g de massa e 25g de recheio).',
     price: 4.50,
-    image: '/assets/pão de casa png 11.png',
+    image: '/assets/casal_perfeito.jpg',
     type: 'standard',
     badge: 'Favorito'
   },
