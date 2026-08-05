@@ -176,7 +176,7 @@ export const Cart = () => {
               <div className="checkout-section">
                 <h4 className="section-title">Forma de Pagamento</h4>
                 <div className="payment-grid">
-                  {['Pix', 'Dinheiro', 'Cartão Crédito', 'Cartão Débito'].map(method => (
+                  {['Pix', 'Dinheiro'].map(method => (
                     <button 
                       key={method}
                       className={`payment-btn ${paymentMethod === method ? 'active' : ''}`}

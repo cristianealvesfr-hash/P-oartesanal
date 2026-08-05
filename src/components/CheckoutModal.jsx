@@ -125,7 +125,6 @@ export const CheckoutModal = () => {
               onChange={handleChange}
             >
               <option value="Pix">Pix</option>
-              <option value="Cartão">Cartão (Débito/Crédito)</option>
               <option value="Dinheiro">Dinheiro</option>
             </select>
           </div>

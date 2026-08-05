@@ -60,7 +60,7 @@ export const LegalModal = ({ type, onClose }) => {
           <p>Trabalhamos <strong>sob encomenda</strong>, com antecedência mínima de 24 horas. A confirmação do pedido só ocorre após o atendimento no WhatsApp e o respectivo pagamento (ou sinal acordado).</p>
 
           <h3>3. Preços e Pagamentos</h3>
-          <p>Os preços exibidos no site estão em Reais (BRL) e podem sofrer alterações sem aviso prévio. As formas de pagamento aceitas são PIX, Dinheiro e Cartões (Crédito/Débito) na retirada, sujeitos à nossa política de recebimento.</p>
+          <p>Os preços exibidos no site estão em Reais (BRL) e podem sofrer alterações sem aviso prévio. As formas de pagamento aceitas são PIX e Dinheiro na retirada, sujeitos à nossa política de recebimento.</p>
 
           <h3>4. Propriedade Intelectual</h3>
           <p>Todo o conteúdo deste site, incluindo imagens, logotipos, textos e design, é de propriedade exclusiva da Pão de Casa. É proibida a reprodução sem autorização prévia.</p>
