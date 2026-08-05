@@ -101,7 +101,7 @@ export const products = [
     name: 'Casa Cheia',
     description: 'Queijo e doce de leite na proporção perfeita! Valor por Unidade (50g de massa e 25g de recheio).',
     price: 4.50,
-    image: '/assets/pão de casa png 1.png',
+    image: '/assets/casa_cheia.jpg',
     type: 'standard'
   }
 ];
