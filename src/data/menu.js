@@ -22,7 +22,7 @@ export const products = [
     name: 'Presente Recheado (Presunto e Muçarela)',
     description: 'Pão com leite, macio e gostoso com 215G de recheio de presunto e muçarela. 600G',
     price: 23.00,
-    image: '/assets/pão de casa png 4.png',
+    image: '/assets/presente_recheado_presunto.jpg',
     type: 'standard'
   },
   {
