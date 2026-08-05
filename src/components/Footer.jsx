@@ -11,7 +11,7 @@ export const Footer = ({ onOpenLegal }) => {
           {/* Coluna 1: Logo e Endereço */}
           <div className="footer-col">
             <div className="footer-logo">
-              <img src="/assets/pão de casa png 2.png" alt="Logo Pão de Casa" className="footer-logo-img" />
+              <img src="/assets/ID VISUAL PÃO DE CASA.jpeg" alt="Logo Pão de Casa" className="footer-logo-img" />
               <div className="footer-logo-text">
                 <h3>Pão de Casa</h3>
                 <span>PADARIA ARTESANAL</span>
