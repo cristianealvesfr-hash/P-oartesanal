@@ -14,6 +14,7 @@ import { LegalModal } from './components/LegalModal';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { Toast } from './components/Toast';
 import { FloatingCartBar } from './components/FloatingCartBar';
+import { GalleryMarquee } from './components/GalleryMarquee';
 
 function App() {
   const [activeCategory, setActiveCategory] = useState(categories[0].id);
@@ -43,6 +44,8 @@ function App() {
                 products={products}
                 searchQuery={searchQuery}
               />
+
+              <GalleryMarquee />
 
               <Testimonials />
             </div>
