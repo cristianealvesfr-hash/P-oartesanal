@@ -44,7 +44,7 @@ export const HeroCarousel = () => {
       id: 3,
       title: "Presente Recheado",
       description: "Pão artesanal super recheado de 600g para matar a sua fome com muito sabor.",
-      image: "/assets/pão de casa png 4.png",
+      image: "/assets/presente_recheado_hero.jpg",
       badge: "MAIS VENDIDO",
       actionText: "Pedir Agora",
       action: () => {
