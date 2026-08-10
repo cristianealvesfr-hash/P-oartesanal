@@ -43,7 +43,7 @@ export const products = [
     name: 'Kit 1 Pão Lembrancinha',
     description: '8 pães de massa leve com 50G cada, ideal para lanches rápidos.',
     price: 15.00,
-    image: '/assets/pão de casa png 3.png',
+    image: '/assets/kit_1_lembrancinha.jpg',
     type: 'standard'
   },
   {
@@ -53,6 +53,25 @@ export const products = [
     description: '5 pães leves de 80G cada e com leite, ideal para lanches e lancheiras. 400G',
     price: 15.00,
     image: '/assets/kit_2_pao_lembranca.jpg',
+    type: 'standard'
+  },
+  {
+    id: 'k_frango',
+    categoryId: 'kits',
+    name: 'Kit Pão Recheado (Frango)',
+    description: 'Pão com leite, macio e gostoso com recheio de frango temperado. Pacote com 8 pãezinhos.',
+    price: 28.00,
+    image: '/assets/kit_frango.jpg',
+    type: 'standard',
+    badge: 'Novidade'
+  },
+  {
+    id: 'k_presunto',
+    categoryId: 'kits',
+    name: 'Kit Pão Recheado (Presunto e Muçarela)',
+    description: 'Pão com leite, macio e gostoso com recheio de presunto e muçarela. Pacote com 8 pãezinhos.',
+    price: 28.00,
+    image: '/assets/presente_recheado_presunto.jpg',
     type: 'standard'
   },
 
