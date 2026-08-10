@@ -60,7 +60,7 @@ export const products = [
     categoryId: 'kits',
     name: 'Kit Pão Recheado (Frango)',
     description: 'Pão com leite, macio e gostoso com recheio de frango temperado. Pacote com 8 pãezinhos.',
-    price: 28.00,
+    price: 23.00,
     image: '/assets/kit_frango.jpg',
     type: 'standard',
     badge: 'Novidade'
@@ -70,7 +70,7 @@ export const products = [
     categoryId: 'kits',
     name: 'Kit Pão Recheado (Presunto e Muçarela)',
     description: 'Pão com leite, macio e gostoso com recheio de presunto e muçarela. Pacote com 8 pãezinhos.',
-    price: 28.00,
+    price: 23.00,
     image: '/assets/presente_recheado_presunto.jpg',
     type: 'standard'
   },
